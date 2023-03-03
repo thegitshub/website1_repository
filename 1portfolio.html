@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>The Portfolio</title>
+
+</head>
+
+<!-- BODY 1 -->
+<body>
+
+	<h1>portfolio</h1>
+
+	<!-- navigation -->
+    <nav>
+		<ul>
+			<li style="margin-right: 150px;"><a href="0homepage.html">home</a></li>
+			<li><a href="2about.html">about</a></li>
+		</ul>
+	</nav>
+
+
+	<!-- GALLERY 1 -->
+
+	<div id="gallery1">
+		
+		<div style="text-align:center">
+			
+			<h2>Courts of India</h2>
+
+			<!-- The four columns -->
+
+			<div class="row">
+				<div class="column">
+					<img src="/Users/kartikeyasaigal/Downloads/FOR KARTIK/Courts of India/Pages from courts_book_Page_03.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+				</div>
+			  <div class="column">
+				<img src="/Users/kartikeyasaigal/Downloads/FOR KARTIK/Courts of India/Pages from courts_book_Page_09.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
+			  </div>
+			  <div class="column">
+				<img src="/Users/kartikeyasaigal/Downloads/FOR KARTIK/Courts of India/Pages from courts_book_Page_01.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+			  </div>
+			  <div class="column">
+				<img src="/Users/kartikeyasaigal/Downloads/FOR KARTIK/Courts of India/Pages from courts_book_Page_08.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+			  </div>
+			</div>
+			
+			<!-- container for button -->
+			
+			<div class="container">
+			  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+			  <img id="expandedImg" style="width:100%">
+			  <div id="imgtext"></div>
+			</div>
+		
+		</div>
+		
+	</div>
+
+<!-- GALLERY 2 -->
+
+<div id="gallery2"></div>
+
+    <div style="text-align:center">
+
+        <h2>Beaches</h2>
+
+    	<div class="row">
+       		 <div class="column">
+            <img src="/Users/kartikeyasaigal/Downloads/Semul miniat_1_img0103_edited.webp" alt="Beach 1" style="width:100%" onclick="myFunction2(this);">
+        	</div>
+       	 <div class="column">
+            <img src="beach2.jpg" alt="Beach 2" style="width:100%" onclick="myFunction2(this);">
+         </div>
+         <div class="column">
+            <img src="beach3.jpg" alt="Beach 3" style="width:100%" onclick="myFunction2(this);">
+         </div>
+         <div class="column">
+            <img src="beach4.jpg" alt="Beach 4" style="width:100%" onclick="myFunction2(this);">
+        </div>
+
+        <div class="container">
+          <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+          <img id="expandedImg2" style="width:100%">
+          <div id="imgtext"></div>
+        </div>
+    
+      </div>
+
+</div>
+
+<!-- CSS -->
+<style>
+
+/* CSS for animation */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    opacity: 1; /* Set the starting opacity */
+  }
+  50% {
+    opacity: 0.5; /* Set the halfway opacity */
+  }
+  100% {
+    opacity: 1; /* Set the ending opacity */
+  }
+}
+
+/* formatting */
+
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #4f4a4a;
+			line-height: 1.5;
+			padding: 20px;
+            text-align: center;
+            background-size: cover;
+			background-repeat: no-repeat;
+			background-position: fixed;
+            animation: fadeIn 2s ease-in-out forwards;
+		}
+		
+		h1 {
+			color: #ffffff;
+			font-size: 36px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: normal;
+			margin-bottom: 1px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out forwards;
+		}
+		
+        h2 {
+            color: white;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: normal;
+            margin-top: 1px;
+            margin-bottom: 5px;   
+        }
+		p {
+			color: #f1efe5;
+			font-size: 18px;
+            margin: 30px;
+			margin-bottom: 10px;
+            text-align: center;
+            
+		}
+
+		nav {
+	  
+	  height: 50px; /* Set the height */
+	  font-family: Arial, sans-serif; /* Set the font family */
+	  position: top; /* Fix the position */
+	  top: 0; /* Set the top position */
+	  width: 50%; /* Set the width to 100% of the viewport */
+	  border-radius: 10px;
+	  margin: 10px auto; /* add this line to center the element */
+	  background-color: rgba(0, 0, 0, 0.5);
+	}
+
+	
+	ul {
+	  list-style: none; /* Remove the default list style */
+	  margin: 0; /* Remove the default margin */
+	  padding: 0; /* Remove the default padding */
+	  display: flex; /* Use flexbox to align the items horizontally */
+	  justify-content: center; /* Center the items horizontally */
+	  align-items: center; /* Center the items vertically */
+	  height: 100%; /* Set the height to 100% of the parent element */
+	}
+	
+	li {
+	  margin: 0 10px; /* Add some margin between the items */
+	  padding: 1px;
+	  animation: shimmer 5s ease-in-out infinite; /* Add the animation property */
+	}
+	
+	a {
+	  color: #fff; /* Set the link color */
+	  text-decoration: none; /* Remove the underline */
+	  font-size: 18px; /* Set the font size */
+	  font-weight: normal; /* Set the font weight */
+	  display: inline-block;
+	  white-space: nowrap; /* Prevent the text from wrapping */
+	}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+  cursor: pointer;
+}
+
+#container {display: none;}
+
+</style>
+
+<!-- gallery display -->
+<script>
+
+	function myFunction(imgs) {
+	  var expandImg = document.getElementById("expandedImg");
+	  var imgText = document.getElementById("imgtext");
+	  expandImg.src = imgs.src;
+	  imgText.innerHTML = imgs.alt;
+	  expandImg.parentElement.style.display = "block";
+	}
+
+  function myFunction2(imgs) {
+	  var expandImg = document.getElementById("expandedImg2");
+	  var imgText = document.getElementById("imgtext");
+	  expandImg.src = imgs.src;
+	  imgText.innerHTML = imgs.alt;
+	  expandImg.parentElement.style.display = "block";
+	}
+	
+  </script>
+  
+
+</html>

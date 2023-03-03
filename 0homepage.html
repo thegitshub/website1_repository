@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title>My Webpage</title>
+
+</head>
+
+  <!-- body -->
+    
+<body>
+
+  <div>
+
+  <div class="header">
+  
+      <header>
+      
+          <h1>Malini Saigal</h1>
+          <h2>Editorial Consultancy</h2>
+  
+      </header>
+  
+    </div>
+
+  <div class="nav">
+      
+      <nav>
+      <ul>
+
+        <li><a href="0homepage.html">home</a></li>
+        <li><a href="2about.html">about</a></li>
+        <li><a href="1portfolio.html">portfolio</a></li>
+        <li><a href="#contact" onclick="showPage('contactPage')">contact</a></li>
+
+      </ul>
+      </nav>
+
+  </div>
+
+  <div class="homepagetext">
+
+    <p>This is homepage text</p>
+  </div>
+  
+  <div class="page" id="contactPage">
+
+      <p>You can email me at john@example.com.</p>
+      <p>Click on the links above to view other pages.</p>
+  
+  </div>
+
+</body>
+
+  <!-- CSS -->
+    
+<style>      
+        
+/* animation */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    opacity: 1; /* Set the starting opacity */
+  }
+  50% {
+    opacity: 0.5; /* Set the halfway opacity */
+  }
+  100% {
+    opacity: 1; /* Set the ending opacity */
+  }
+}
+/* formatting */
+
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #e7d8d8;
+			line-height: 1.5;
+			padding: 20px;
+      text-align: center;
+      background: url('/Users/kartikeyasaigal/Downloads/01.webp');
+      background-size: cover;
+			background-repeat: no-repeat;
+			background-position: fixed;
+      animation: fadeIn 2s ease-in-out forwards;
+            
+		}
+		
+		h1 {
+			color: #ffffff;
+			font-size: 36px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: normal;
+			margin-bottom: 1px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out forwards;
+		}
+		
+        h2 {
+            color: white;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: normal;
+            margin-top: 1px;
+            margin-bottom: 5px;   
+        }
+		p {
+			color: #f1efe5;
+			font-size: 18px;
+            margin: 30px;
+			margin-bottom: 10px;
+            text-align: center;
+            
+		}
+
+/* pages */
+
+.page {
+			display: none;
+		}
+		
+		.page.active {
+			display: block;
+		}
+
+  
+  nav {
+  
+  height: 50px; /* Set the height */
+  font-family: Arial, sans-serif; /* Set the font family */
+  position: top; /* Fix the position */
+  top: 0; /* Set the top position */
+  width: 70%; /* Set the width to 100% of the viewport */
+  border-radius: 10px;
+  margin: 10px auto; /* add this line to center the element */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+ul {
+  list-style: none; /* Remove the default list style */
+  margin: 0; /* Remove the default margin */
+  padding: 0; /* Remove the default padding */
+  display: flex; /* Use flexbox to align the items horizontally */
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Center the items vertically */
+  height: 100%; /* Set the height to 100% of the parent element */
+}
+
+li {
+  margin: 0 10px; /* Add some margin between the items */
+  padding: 80px;
+  animation: shimmer 5s ease-in-out infinite; /* Add the animation property */
+}
+
+a {
+  color: #fff; /* Set the link color */
+  text-decoration: none; /* Remove the underline */
+  font-size: 18px; /* Set the font size */
+  font-weight: normal; /* Set the font weight */
+}
+
+button {
+  background-color: #fff; /* Set the background color */
+  color: #333; /* Set the text color */
+  border: none; /* Remove the border */
+  padding: 10px 20px; /* Add some padding */
+  font-size: 18px; /* Set the font size */
+  font-weight: bold; /* Set the font weight */
+  cursor: pointer; /* Change the cursor to a pointer */
+}
+
+</style>
+
+<!-- JavaScript -->
+
+    	<script>
+            
+/* page function */
+
+            function showPage(pageId) {
+                var pages = document.getElementsByClassName("page");
+                for (var i = 0; i < pages.length; i++) {
+                    pages[i].classList.remove("active");
+                }
+                document.getElementById(pageId).classList.add("active");
+            }
+        </script>
+        
+</html>
