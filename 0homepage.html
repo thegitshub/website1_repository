@@ -76,6 +76,19 @@
   100% {
     opacity: 1; /* Set the ending opacity */
   }
+
+}
+
+@keyframes changeColor {
+  0% {
+    background-color: #ffffff; /* dark blue */
+  }
+  50% {
+    background-color: #8fc9ff; /* light blue */
+  }
+  100% {
+    background-color:#ffffff; /* dark blue */
+  }
 }
 /* formatting */
 
@@ -102,6 +115,7 @@
       margin-top: 0px;
       text-align: center;
       animation: fadeIn 1s ease-in-out forwards;
+      
 		}
 
     h2 {
@@ -132,6 +146,8 @@
       border-radius: 10px;
       margin: 0px auto;
       max-width: 800px;
+      animation: fadeIn 2s ease-in-out, shimmer 10s ease-in-out infinite, changeColor 15s ease-in-out infinite; 
+    
     }
 /* pages */
 
